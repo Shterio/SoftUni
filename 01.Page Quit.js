@@ -25,16 +25,15 @@ function pageQuit1(input) {
             }
         }
     }
-    let output = '';
+
     for (let i = 0; i < currArray.length; i++) {
-        for (let y = 0; y < currArrayCounter[i]; y++) {
-            output += currArray[i];
-        }
+
+        currArray[i] = currArray[i].repeat(currArrayCounter[i]);
     }
     let uniqueSymbols = [...new Set(currArray.join(''))].length;
 
     console.log(`Unique symbols used: ${uniqueSymbols}`);
-    console.log(output);
+    console.log(currArray.join(''));
 
 
 

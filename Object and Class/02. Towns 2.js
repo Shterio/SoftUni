@@ -11,9 +11,6 @@ towns = (array) => {
             latitude: latitude,
             longitude: longitude
         })
-
-
-
     }
     citys.forEach(i => console.log(i));
 

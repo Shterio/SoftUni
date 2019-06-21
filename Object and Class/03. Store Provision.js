@@ -14,7 +14,7 @@ store = (stock, delivery) => {
 
     }
     for (let key in products) {
-     console.log(`${key} -> ${products[key]}`);
+        console.log(`${key} -> ${products[key]}`);
     }
 };
 store([

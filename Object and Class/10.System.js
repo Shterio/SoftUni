@@ -15,8 +15,10 @@ function system(systems) {
     });
 
     systemsOutput = Object.entries(systemsOutput);
+
     systemsOutput.forEach(system => {
         system[1] = Object.entries(system[1])
+
     });
 
     sortSystems(systemsOutput);

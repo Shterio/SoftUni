@@ -4,22 +4,40 @@ movies = (input) => {
     for (let inputElement of input) {
         if (inputElement.includes('addMovie')) {
             let token = inputElement.split('addMovie ');
-            addMovie(token[1])
-        } else if (inputElement.includes('directedBy')){
-            let [movieName, director] = inputElement.split(' directedBy ');
+            let movieName = token[1];
+            addMovie(movieName)
+        } else if (inputElement.includes('directedBy')) {
+            let [movieName, directorName] = inputElement.split(' directedBy ');
+            addDirector(movieName, directorName)
+        } else {
+            let [movieName, date] = inputElement.split(' onDate ');
+            addDate(movieName, date);
         }
     }
-    function addMovie (movieName){
-        return movies.push({name: movieName});
-    }
-    function addDirector (movieName, director){
-        let foundMovie = movies.find(m => m.name === movieName);
-        if (foundMovie){
-            movies.movieName = director;
-        }
-    }
-    console.log(movies);
 
+    for (let movie of movies) {
+        if (movie.hasOwnProperty('name') && movie.hasOwnProperty('director') && movie.hasOwnProperty('date')) {
+            console.log(JSON.stringify(movie));
+        }
+    }
+
+    function addMovie(movieName) {
+        movies.push({name: movieName});
+    }
+
+    function addDirector(movieName, directorName) {
+        let foundMovie = movies.find(m => m.name === movieName);
+        if (foundMovie) {
+            foundMovie.director = directorName;
+        }
+    }
+
+    function addDate(movieName, date) {
+        let foundDate = movies.find(m => m.name === movieName);
+        if (foundDate) {
+            foundDate.date = date;
+        }
+    }
 };
 movies([
     'addMovie Fast and Furious',

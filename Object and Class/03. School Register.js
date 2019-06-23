@@ -3,6 +3,8 @@ school =(array) => {
     let grade10 = [[],[]];
     let grade11 = [[],[]];
     let grade12 = [[],[]];
+    let avarege = [];
+
 
     for (let arrayElement of array) {
         let [name,grade,score]= arrayElement.split(', ');
@@ -18,8 +20,8 @@ school =(array) => {
         }
         if (grade === 9){
             if (score >= 3){
-                grade10[0].push(name);
-                grade10[1].push(score);
+               grade10[0].push(name);
+               grade10[1].push(score);
             }
         }
         if (grade === 10){
@@ -35,11 +37,14 @@ school =(array) => {
             }
         }
     }
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
 
-    console.log(grade9);
-    console.log(grade10);
-    console.log(grade11);
-    console.log(grade12);
+    function score(input) {
+        input[1] = input[1].reduce(reducer) / input[1].length;
+    }
+
+
+console.log(grade10);
 };
 school([ 'Student name: Mark, Grade: 8, Graduated with an average score: 4.75',
     'Student name: Ethan, Grade: 9, Graduated with an average score: 5.66',

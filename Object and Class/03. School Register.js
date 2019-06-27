@@ -1,13 +1,24 @@
 school = (array) => {
-    let obj = new Map();
+    let students = {};
 
     for (let argument of array) {
         let line = argument.split(': ').join(' ').split(', ');
         let name = line[0].split(' ')[2];
-        let score = Number(line[1].split(' ')[1]) + 1;
-        console.log(score);
-        console.log(line);
+        let grade = Number(line[1].split(' ')[1]) + 1;
+        let score = Number(line[2].split(' ')[5]);
+
+        if (score >= 3) {
+            if (students.hasOwnProperty(grade)) {
+                students[grade].push({'name': name, 'average': score})
+            } else {
+                students[grade] = [{'name': name, 'average': score}]
+            }
+        }
     }
+    let obj = Object.entries(students);
+    let sort = Object.entries(obj[0][1]);
+
+    console.log(sort);
 };
 school(['Student name: Mark, Grade: 8, Graduated with an average score: 4.75',
     'Student name: Ethan, Grade: 9, Graduated with an average score: 5.66',

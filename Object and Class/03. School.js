@@ -22,6 +22,7 @@ function solve(arr) {
             }
         }
     }
+    console.log(studentObj);
 
     let objEntries = Object.entries(studentObj)
         .sort((a, b) => a[0] - b[0]);

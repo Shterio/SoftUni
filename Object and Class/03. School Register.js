@@ -15,10 +15,25 @@ school = (array) => {
             }
         }
     }
-    let obj = Object.entries(students);
-    let sort = Object.entries(obj[0][1]);
 
-    console.log(sort);
+    let names = [];
+    let average = [];
+
+    let obj = Object.entries(students).sort((a, b) => a[0] - b[0]);
+
+    for (let argument of obj) {
+        console.log(`${argument[0]} Grade`);
+        for (let any of argument[1]) {
+            names.push(Object.entries(any)[0][1]);
+            average.push(Object.entries(any)[1][1])
+        }
+
+        console.log(`List of students: ${names.join(', ')}`);
+        console.log(`Average annual grade from last year: ${(average.reduce((a, b) => a + b, 0) / names.length).toFixed(2)}`);
+        console.log();
+        names = [];
+        average = [];
+    }
 };
 school(['Student name: Mark, Grade: 8, Graduated with an average score: 4.75',
     'Student name: Ethan, Grade: 9, Graduated with an average score: 5.66',

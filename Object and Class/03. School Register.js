@@ -3,7 +3,6 @@ school = (array) => {
 
     for (let argument of array) {
         let line = argument.split(': ').join(' ').split(', ');
-        console.log(line);
         let name = line[0].split(' ')[2];
         let grade = Number(line[1].split(' ')[1]) + 1;
         let score = Number(line[2].split(' ')[5]);

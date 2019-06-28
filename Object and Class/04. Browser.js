@@ -8,3 +8,13 @@ function browserHistory(input, actions) {
                 output['Recently Closed'].push(nameSite);
                 output['Browser Logs'].push(action);
             }
+        } else if (action.includes('Open ')) {
+            let nameSite = action.split('Open ')[1];
+            output['Open Tabs'].push(nameSite);
+            output['Browser Logs'].push(action);
+        } else if (action === 'Clear History and Cache') {
+            output['Open Tabs'] = [];
+            output['Recently Closed'] = [];
+            output['Browser Logs'] = [];
+        }
+    }

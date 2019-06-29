@@ -20,3 +20,11 @@ browser = (input, array) => {
         }
 
     }
+    let browsers = Object.entries(history);
+
+    console.log(`${browsers[0][1]}`);
+    console.log(`Open Tabs: ${browsers[1][1].join(', ')}`);
+    console.log(`Recently Closed: ${browsers[2][1].join(', ')}`);
+    console.log(`Browser Logs: ${browsers[3][1].join(', ')}`);
+
+};

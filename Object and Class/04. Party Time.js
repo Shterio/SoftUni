@@ -23,3 +23,10 @@ party = (input) => {    let output = new Map();
         }
     }
 
+    let sorted = output.get('VIP').concat(output.get('regular'));
+
+    console.log(sorted.length);
+    for (let guest of sorted) {
+        console.log(guest);
+    }
+};

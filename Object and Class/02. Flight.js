@@ -1,8 +1,9 @@
 flights = ([flights, info, toDisplay]) => {
+    toDisplay = toDisplay[0];
+
     let result = {};
 
     flights.forEach(elem => {
-
         let flightNumber = elem.split(' ')[0];
         let destination = elem.split(' ').slice(1).join(' ');
 
@@ -10,19 +11,19 @@ flights = ([flights, info, toDisplay]) => {
             Destination: destination,
             Status: 'Ready to fly'
         }
-    })
+    });
+
+    // Change status to 'Canceled'
     info.forEach(elem => {
         let [code, status] = elem.split(' ');
         if (code in result) {
-            result[code].Status = status
+            result[code].Status = status;
         }
     });
-    for (flight in result) {
 
-        if (result[flight].Status === toDisplay[0]) {
-            console.log(result[flight]);
-        }
-    }
+    Object.values(result)
+        .filter(f => f.Status === toDisplay)
+        .forEach(i => console.log(i))
 };
 flights([['WN269 Delaware',
     'FL2269 Oregon',

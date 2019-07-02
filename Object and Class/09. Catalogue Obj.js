@@ -8,3 +8,7 @@ catalogue = (input) => {
         if (!obj.hasOwnProperty(initial)) {
             obj[initial] = [];
         }
+        obj[initial].push(element);
+    }
+    let sorted = Object.entries(obj)
+        .sort((a, b) => a[0].localeCompare(b[0]));

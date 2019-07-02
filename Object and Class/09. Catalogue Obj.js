@@ -1,0 +1,3 @@
+catalogue = (input) => {
+    let obj = {};
+

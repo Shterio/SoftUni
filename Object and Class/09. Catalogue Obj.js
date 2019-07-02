@@ -12,3 +12,12 @@ catalogue = (input) => {
     }
     let sorted = Object.entries(obj)
         .sort((a, b) => a[0].localeCompare(b[0]));
+    for (let [initial, products] of sorted) {
+        console.log(initial);
+        let sortedProducts = products
+            .sort((a, b) => a[0].localeCompare(b[0]));
+        for (let sortedProduct of sortedProducts) {
+            console.log(sortedProduct.split(' : ').join(': '));
+        }
+    }
+};

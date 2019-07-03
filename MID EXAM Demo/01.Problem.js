@@ -7,3 +7,6 @@ party = (input) => {
         if (i % 10 === 0) {
             size -= 2;
         }
+        if (i % 15 === 0) {
+            size += 5;
+        }

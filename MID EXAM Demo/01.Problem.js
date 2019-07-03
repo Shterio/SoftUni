@@ -23,3 +23,7 @@ party = (input) => {
         }
 
     }
+    console.log(`${size} companions received ${Math.floor(earnsCoins / size)} coins each.`);
+};
+party(['3', '5']);
+party(['15', '30']);

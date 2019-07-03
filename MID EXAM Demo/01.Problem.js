@@ -15,3 +15,11 @@ party = (input) => {
         if (i % 3 === 0) {
             earnsCoins -= 3 * size;
         }
+        if (i % 5 === 0) {
+            earnsCoins += 20 * size;
+            if (i % 3 === 0) {
+                earnsCoins -= 2 * size;
+            }
+        }
+
+    }

@@ -34,3 +34,10 @@ eastern(['Eggs StuffedAnimal Cozonac Sweets EasterBunny Eggs Clothes',
     'JustInCase ChocolateEgg',
     'No Money']);
 
+eastern([ 'Sweets Cozonac Clothes Flowers Wine Clothes Eggs Clothes',
+    'Required Paper 8',
+    'OutOfStock Clothes',
+    'Required Chocolate 2',
+    'JustInCase Hat',
+    'OutOfStock Cable',
+    'No Money' ]);

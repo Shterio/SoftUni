@@ -6,4 +6,13 @@ eastern = (array) => {
             let filteredGifts = gifts.filter(i => i !== 'None');
             console.log(filteredGifts.join(' '));
             break;
-        }
+        }else {
+            let [command, gift, index] = arrayElement.split(' ');
+            if (command === 'OutOfStock') {
+                if (gifts.includes(gift)) {
+                    while (gifts.includes(gift)) {
+                        let indexOfGift = gifts.indexOf(gift);
+                        gifts[indexOfGift] = 'None'
+                    }
+                }
+            }

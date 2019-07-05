@@ -21,4 +21,10 @@ eastern = (array) => {
                     gifts.splice(index, 1, gift);
                 }
 
+            }else if (command === 'JustInCase') {
+                let lastGift = gifts.pop();
+                gifts.push(gift)
             }
+        }
+    }
+};

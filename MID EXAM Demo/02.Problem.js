@@ -28,3 +28,9 @@ eastern = (array) => {
         }
     }
 };
+eastern(['Eggs StuffedAnimal Cozonac Sweets EasterBunny Eggs Clothes',
+    'OutOfStock Eggs',
+    'Required Spoon 2',
+    'JustInCase ChocolateEgg',
+    'No Money']);
+

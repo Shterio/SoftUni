@@ -15,4 +15,10 @@ eastern = (array) => {
                         gifts[indexOfGift] = 'None'
                     }
                 }
+            }else if (command === 'Required') {
+                index = Number(index);
+                if (index < gifts.length && index >= 0) {
+                    gifts.splice(index, 1, gift);
+                }
+
             }

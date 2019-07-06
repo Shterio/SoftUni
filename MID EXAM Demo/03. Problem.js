@@ -20,4 +20,10 @@ lastStop = (array) => {
                     let index = numbers.indexOf(firstNum);
                     numbers.splice(index, 1);
                 }
+            } else if (command === 'Switch') {
+                if (numbers.includes(firstNum) && numbers.includes(secondNum)) {
+                    let indexOfFirst = numbers.indexOf(firstNum);
+                    let indexOfSecond = numbers.indexOf(secondNum);
+                    numbers[indexOfFirst] = numbers.splice(indexOfSecond, 1, numbers[indexOfFirst])[0];
+                }
             }

@@ -26,4 +26,13 @@ lastStop = (array) => {
                     let indexOfSecond = numbers.indexOf(secondNum);
                     numbers[indexOfFirst] = numbers.splice(indexOfSecond, 1, numbers[indexOfFirst])[0];
                 }
+            }else if (command === 'Insert') {
+                if (firstNum < numbers.length && firstNum >= 0) {
+                    numbers.splice(firstNum+1,0,secondNum);
+                }
+            } else if (command === 'Reverse'){
+                numbers.reverse();
             }
+        }
+    }
+};

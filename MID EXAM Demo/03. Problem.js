@@ -10,3 +10,9 @@ lastStop = (array) => {
             firstNum = Number(firstNum);
             secondNum = Number(secondNum);
 
+            if (command === 'Change') {
+                if (numbers.includes(firstNum)) {
+                    let index = numbers.indexOf(firstNum);
+                    numbers[index] = secondNum;
+                }
+            }

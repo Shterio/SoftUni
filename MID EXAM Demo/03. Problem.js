@@ -36,3 +36,10 @@ lastStop = (array) => {
         }
     }
 };
+lastStop(['77 120 115 101 101 97 78 88 112 111 108 101 111 110',
+    'Insert 5 32',
+    'Switch 97 78',
+    'Hide 88',
+    'Change 120 117',
+    'Reverse',
+    'END']);

@@ -15,4 +15,9 @@ lastStop = (array) => {
                     let index = numbers.indexOf(firstNum);
                     numbers[index] = secondNum;
                 }
+            }else if (command === 'Hide') {
+                if (numbers.includes(firstNum)) {
+                    let index = numbers.indexOf(firstNum);
+                    numbers.splice(index, 1);
+                }
             }

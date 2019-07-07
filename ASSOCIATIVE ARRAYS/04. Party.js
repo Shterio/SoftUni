@@ -18,3 +18,20 @@ party = (input) => {
             }
         }
     });
+    let vip = result.in.filter(a => a[0] == Number(a[0]));
+    let regular = result.in.filter(a => a[0] != Number(a[0]));
+
+    console.log(result.in.length);
+    vip.concat(regular).forEach(elem => console.log(elem))
+};
+party([
+    '9NoBUajQ',
+    'Ce8vwPmE',
+    'SVQXQCbc',
+    'tSzE5t0p',
+    '7IK9Yo0h',
+    'PARTY',
+    '9NoBUajQ',
+    'Ce8vwPmE',
+    'SVQXQCbc'
+]);

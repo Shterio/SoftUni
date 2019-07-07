@@ -10,3 +10,11 @@ party = (input) => {
         } else {
             void (0);
         }
+        if (elem !== 'PARTY') {
+            if (isStarted) {
+                result.in.splice(result.in.indexOf(elem), 1)
+            } else {
+                result.in.push(elem)
+            }
+        }
+    });

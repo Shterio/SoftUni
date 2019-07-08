@@ -18,3 +18,7 @@ book = (array) => {
             }
         }
     });
+    for (const key in books) {
+        books[key][1].sort((a, b) => a.localeCompare(b));
+
+    }

@@ -46,7 +46,7 @@ function solve(array) {
     }
 }
 
-//solve(['Pesho -> BattleCry -> 400',
+//cardGame(['Pesho -> BattleCry -> 400',
 //    'Gosho -> PowerPunch -> 300',
 //    'Stamat -> Duck -> 200',
 //    'Stamat -> Tiger -> 250',

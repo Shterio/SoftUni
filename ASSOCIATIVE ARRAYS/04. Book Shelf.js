@@ -22,3 +22,11 @@ book = (array) => {
         books[key][1].sort((a, b) => a.localeCompare(b));
 
     }
+    let sorted = Object.entries(books).sort((a, b) => b[1][1].length - a[1][1].length);
+    for (let i of sorted) {
+        console.log(`${i[0]} ${i[1][0]} ${i[1][1].length}`);
+        for (let any of i[1][1]) {
+            console.log(`--> ${any}`);
+        }
+    }
+};

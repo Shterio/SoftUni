@@ -9,4 +9,12 @@ book = (array) => {
                 books[id] = [];
                 books[id].push(genre, [])
             }
+        }else {
+            let [title, genre] = element.split(', ');
+            for (const key in books) {
+                if (books[key].includes(genre)) {
+                    books[key][1].push(title);
+                }
+            }
         }
+    });

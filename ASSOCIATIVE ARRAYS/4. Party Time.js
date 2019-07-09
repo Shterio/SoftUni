@@ -36,3 +36,4 @@ party = (input) => {
     console.log(length);
     console.log(guest.vip.join('\n'));
     console.log(guest.regular.join('\n'));
+};

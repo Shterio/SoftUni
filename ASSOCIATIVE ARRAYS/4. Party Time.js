@@ -7,3 +7,10 @@ party = (input) => {
         'vip': [],
         'regular': []
     };
+    for (let person of list) {
+        if (isRegular(person)) {
+            guest.regular.push(person)
+        } else {
+            guest.vip.push(person)
+        }
+    }

@@ -37,3 +37,14 @@ party = (input) => {
     console.log(guest.vip.join('\n'));
     console.log(guest.regular.join('\n'));
 };
+party([
+    '9NoBUajQ',
+    'Ce8vwPmE',
+    'SVQXQCbc',
+    'tSzE5t0p',
+    '7IK9Yo0h',
+    'PARTY',
+    '9NoBUajQ',
+    'Ce8vwPmE',
+    'SVQXQCbc'
+]);

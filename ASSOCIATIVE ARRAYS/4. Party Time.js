@@ -24,3 +24,15 @@ party = (input) => {
             let vip = guest.vip;
             let indexOf = vip.indexOf(propt);
 
+            vip.splice(indexOf, 1);
+        }
+    }
+
+    function isRegular (quest){
+        let symbol = Number(quest[0]);
+        return isNaN(symbol);
+    }
+    let length = guest.vip.length + guest.regular.length;
+    console.log(length);
+    console.log(guest.vip.join('\n'));
+    console.log(guest.regular.join('\n'));

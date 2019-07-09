@@ -14,3 +14,9 @@ party = (input) => {
             guest.vip.push(person)
         }
     }
+    for (let propt of start) {
+        if (isRegular(propt)) {
+            let regular = guest.regular;
+            let indexOf = regular.indexOf(propt);
+
+            regular.splice(indexOf, 1);

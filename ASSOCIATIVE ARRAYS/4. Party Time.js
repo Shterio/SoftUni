@@ -20,3 +20,7 @@ party = (input) => {
             let indexOf = regular.indexOf(propt);
 
             regular.splice(indexOf, 1);
+        } else {
+            let vip = guest.vip;
+            let indexOf = vip.indexOf(propt);
+

@@ -1,0 +1,278 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.wrapper {
+    width: 1080px;
+    height: auto;
+    margin: auto;
+
+    .bild {
+        img {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 400px;
+            z-index: -1;
+        }
+        .mobile {
+            display: none;
+        }
+    }
+
+}
+
+@media (max-width: 480px) {
+    .wrapper {
+        width: 480px;
+
+        .bild {
+            .desktop {
+                display: none;
+            }
+            .mobile {
+                display: block;
+            }
+        }
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:rgba($color: #000000, $alpha: 0.5);
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    span {
+        display: block;
+    }
+
+    ul {
+        display: flex;
+
+        li:after {
+            content: ' |';
+            color: goldenrod;
+        }
+
+        li {
+            padding-right: 1em;
+
+            a {
+                color: white;
+                font-size: 1.2em;
+            }
+
+            a:hover {
+                color: goldenrod;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        display: block;
+        font-size: 0.7em;
+    }
+
+    .logo img {
+        display: block;
+        margin: auto;
+        width: 20%;
+    }
+}
+
+.titel {
+    width: 80%;
+    margin: auto;
+    margin-top: 2em;
+    text-align: center;
+
+    h1 {
+        font-size: 3em;
+        color: goldenrod;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    h3 {
+        color: grey;;
+        font-weight: 300;
+    }
+
+    button {
+        margin-top: 2em;
+        width: 20em;
+        background: goldenrod;
+        border: none;
+        border-radius: 5em;
+        cursor: pointer;
+
+        p {
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .titel {
+        width: 80%;
+        margin: auto;
+        margin-top: 4em;
+    }
+
+    .mensch {
+        display: none;
+    }
+}
+
+.content {
+    width: 100%;
+    height: 40em;
+    background: #daa520;
+    margin-top: 10em;
+
+    .text {
+        padding: 4em;
+        width: 52%;
+        margin: auto;
+
+        .border {
+            h3 {
+                font-size: 2em;
+                margin-left: 22px;
+            }
+
+            .ls {
+                li {
+                    list-style: disc;
+                    margin-bottom: 1em;
+                    a {
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.aktuell {
+    width: 100%;
+    height: 32em;
+    background: whitesmoke;
+    position: relative;
+
+    .mensch {
+        width: 22em;
+        position: absolute;
+        top: 5.8em;
+        left: 3.2em;
+    }
+
+    .text {
+        padding: 4em;
+        width: 52%;
+        margin-left: 24em;
+
+        .border {
+            border-left: 5px solid gray;
+
+            h3,
+            p {
+                padding-left: 16px;
+            }
+
+            h3 {
+                font-size: 2em;
+                margin-bottom: 0.5em;
+                margin-top: 0;
+            }
+
+            p {
+                margin: 0;
+                line-height: 1.6em;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        height: 29em;
+        margin-top: 7em;
+
+        .text {
+            padding: 2em;
+            width: 80%;
+            font-size: .8em;
+
+            .border {
+
+                h3 {
+                    margin-top: .6em;
+                }
+
+                p {
+                    margin: 0;
+                    line-height: 1.6em;
+                }
+            }
+        }
+    }
+
+    .aktuell {
+        height: 24em;
+        .text {
+            padding: 2em;
+            width: 80%;
+            font-size: .8em;
+            margin: auto;
+
+            .border {
+                border-left: 3px solid gray;
+
+                h3 {
+                    margin-top: .6em;
+                }
+
+                p {
+                    margin: 0;
+                    line-height: 1.6em;
+                }
+            }
+        }
+
+    }
+}
+
+footer {
+    width: 100%;
+    height: 10em;
+
+    header {
+        padding: 2em;
+    }
+
+    background: gray;
+    opacity: 1;
+}

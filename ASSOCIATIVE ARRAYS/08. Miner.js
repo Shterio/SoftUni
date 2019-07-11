@@ -6,3 +6,9 @@ miner = (array) => {
         const quantity = Number(array[i + 1]);
 
 
+        if (!book.hasOwnProperty(resource)) {
+            book[resource] = 0;
+        }
+
+        book[resource] += quantity;
+

@@ -16,3 +16,11 @@ miner = (array) => {
     }
     Object.entries(book).forEach(i => console.log(`${i[0]} -> ${i[1]}`));
 };
+miner([
+    'Gold',
+    '155',
+    'Silver',
+    '10',
+    'Copper',
+    '17'
+]);

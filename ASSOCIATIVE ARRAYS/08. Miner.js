@@ -24,3 +24,13 @@ miner([
     'Copper',
     '17'
 ]);
+miner([
+    'gold',
+    '155',
+    'silver',
+    '10',
+    'copper',
+    '17',
+    'gold',
+    '15'
+]);

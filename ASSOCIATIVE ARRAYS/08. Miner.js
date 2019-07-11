@@ -12,3 +12,6 @@ miner = (array) => {
 
         book[resource] += quantity;
 
+
+    }
+    Object.entries(book).forEach(i => console.log(`${i[0]} -> ${i[1]}`));

@@ -31,3 +31,7 @@ picolo(['IN, CA2844AA',
     'OUT, CA2866HI',
     'IN, CA9876HH',
     'IN, CA2822UU']);
+picolo(['IN, CA2844AA',
+    'IN, CA1234TA',
+    'OUT, CA2844AA',
+    'OUT, CA1234TA']);

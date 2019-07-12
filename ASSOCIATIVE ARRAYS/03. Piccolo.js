@@ -14,3 +14,10 @@ picolo = (array) => {
             }
         }
     }
+    let sorted = [...map.entries()].sort((a, b) => a[0].localeCompare(b[0]))
+    if (sorted.length > 0) {
+        sorted.forEach(i => console.log(i[0]))
+    } else {
+        console.log('Parking Lot is Empty');
+    }
+};

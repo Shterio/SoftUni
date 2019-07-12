@@ -8,3 +8,9 @@ picolo = (array) => {
             if (!map.has(car)) {
                 map.set(car, 1);
             }
+        } else if (command === 'OUT') {
+            if (map.has(car)) {
+                map.delete(car);
+            }
+        }
+    }

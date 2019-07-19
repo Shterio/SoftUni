@@ -33,3 +33,13 @@ function solve(input){
     }
 }
 
+solve([
+    'Add->PeakSports->Map,Navigation,Compass',
+    'Add->Paragon->Sunscreen',
+    'Add->Groceries->Dried-fruit,Nuts',
+    'Add->Groceries->Nuts',
+    'Add->Paragon->Tent',
+    'Remove->Paragon',
+    'Add->Pharmacy->Pain-killers',
+    'END' ]);
+

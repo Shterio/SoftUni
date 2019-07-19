@@ -47,3 +47,5 @@ function onTheWayToAnnapurna(input) {
     let output = {};
     let curCommand = input.shift();
 
+    while (curCommand !== 'END') {
+        let [command, store, items] = curCommand.split('->');

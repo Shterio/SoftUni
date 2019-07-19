@@ -49,3 +49,17 @@ function onTheWayToAnnapurna(input) {
 
     while (curCommand !== 'END') {
         let [command, store, items] = curCommand.split('->');
+        if (command === 'Add') {
+            if (!Object.keys(output).includes(store)) {
+                output[store] = []
+            }
+            items.split(',').forEach(element => {
+                output[store].push(element);
+            });
+        } else if (command === 'Remove') {
+            if (Object.keys(output).includes(store)) {
+                delete(output[store]);
+            }
+        }
+        curCommand = input.shift();
+    }

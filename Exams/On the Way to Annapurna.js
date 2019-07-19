@@ -63,3 +63,17 @@ function onTheWayToAnnapurna(input) {
         }
         curCommand = input.shift();
     }
+    output = Object.entries(output);
+    output.sort((a, b) => {
+        if (a[1].length > b[1].length) {
+            return -1;
+        } else if (a[1].length < b[1].length) {
+            return 1;
+        } else {
+            if (a[0] > b[0]) {
+                return -1;
+            } else if (a[0] < b[0]) {
+                return 1
+            }
+        }
+    });

@@ -19,3 +19,17 @@ function solve(input){
         }
     }
 
+    endList = endList.sort((a, b) => b.items.length - a.items.length || b.name.localeCompare(a.name));
+
+    console.log(`Stores list:`);
+    for(let stores of endList){
+        let store = Object.values(stores)[0];
+        let items = Object.values(stores)[1].split(',');
+
+        console.log(store);
+        for(let item of items){
+            console.log(`<<${item}>>`);
+        }
+    }
+}
+

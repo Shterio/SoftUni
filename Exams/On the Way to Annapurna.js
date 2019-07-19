@@ -86,3 +86,5 @@ function onTheWayToAnnapurna(input) {
         });
     });
 }
+
+onTheWayToAnnapurna([

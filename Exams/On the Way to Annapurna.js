@@ -43,3 +43,7 @@ solve([
     'Add->Pharmacy->Pain-killers',
     'END' ]);
 
+function onTheWayToAnnapurna(input) {
+    let output = {};
+    let curCommand = input.shift();
+

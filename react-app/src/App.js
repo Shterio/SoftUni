@@ -3,6 +3,8 @@ import './app.css';
 import './index.css'
 import ContactList from './contacts.json'
 import rerender from "./index";
+import Button from "./components/Button";
+import CountDown from "./components/CountDown";
 
 let contactIndex = 0;
 
@@ -59,7 +61,9 @@ function App() {
                     <h1>Details</h1>
                     {contactDetails(ContactList[contactIndex])}
                 </div>
+                <Button />
             </div>
+            <CountDown hours="0" minutes="01" />
             <footer>Contact Book SPA &copy; 2017</footer>
         </div>
     );

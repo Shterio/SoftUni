@@ -19,17 +19,15 @@ class Button extends Component {
 
     buttonClick() {
         this.setState(function (prevState) {
-            return  {count: prevState.count + 1, isOn: !prevState.isOn}
+            return {count: prevState.count + 1, isOn: !prevState.isOn}
         })
     }
 
-    render() {
-        return (
-            <button onClick={this.buttonClick} className='Button'>
-                I'm Clicked - {this.state.count} times and is {this.state.isOn ? 'ON' : 'OFF'}
-            </button>
-        )
-    }
+    render = () => (
+        <button onClick={this.buttonClick} className='Button'>
+            I'm Clicked - {this.state.count} times and is {this.state.isOn ? 'ON' : 'OFF'}
+        </button>
+    )
 }
 
 export default Button

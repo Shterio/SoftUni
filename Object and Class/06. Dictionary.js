@@ -1,4 +1,4 @@
-solve = (input) => {
+cardGame = (input) => {
     let dictionary = {};
     let obj = input.map(i => JSON.parse(i));
 

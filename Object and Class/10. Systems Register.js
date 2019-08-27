@@ -1,6 +1,8 @@
 system = (input) => {
     let systems = new Map();
 
+    
+
     for (let i = 0; i < input.length; i++) {
         let [system, component, subComponent] = input[i].split(' | ');
         if (!systems.has(system)) {
